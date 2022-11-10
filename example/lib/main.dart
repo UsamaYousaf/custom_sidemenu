@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'Home',
-                        iconData: Icons.home,
+                        leadingIcon: Icons.home,
                 
                       ),
 
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'History',
-                        iconData: Icons.history,
+                           leadingIcon: Icons.history,
                        
                       ),
                         Menuitem(
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'Alarm',
-                        iconData: Icons.access_alarm,
+                          leadingIcon: Icons.access_alarm,
                        
                       ),
                          Menuitem(
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: '',
-                        iconData: Icons.history,
+                           leadingIcon: Icons.history,
                        
                       ),
                        Menuitem(
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'History',
-                        iconData: Icons.history,
+                         leadingIcon: Icons.history,
                        
                       ),
                      Menuitem(
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'History',
-                        iconData: Icons.history,
+                       leadingIcon: Icons.history,
                        
                       ),
                        Menuitem(
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         
                         },
                         title: 'History',
-                        iconData: Icons.history,
+                         leadingIcon: Icons.history,
                        
                       ),
   ];
@@ -103,8 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //   title: Text(widget.title),
       // ),
-      body:CustomDrawer(homeWidget:  Scaffold(
-        appBar: AppBar(title:Text('Here')),
+      body:CustomDrawer(homeWidget:  const Scaffold(
         body: Center(child:Text('Your Home Widget'),)),
       menuItemsList: menuItemsList, appBarActions: [], appBarTitle:Text('Your Home Widget') , menuIcon: Icon(Icons.menu),
       )

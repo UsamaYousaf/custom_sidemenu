@@ -1,17 +1,17 @@
 library custom_sidemenu;
 
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 
 
 
 class CustomDrawer extends StatefulWidget {
- const CustomDrawer({Key? key, required this.menuItemsList, required this.homeWidget, required this.appBarTitle, required this.appBarActions, required this.menuIcon}) : super(key: key);
+ const CustomDrawer({Key? key, required this.menuItemsList, required this.homeWidget, required this.appBarTitle, required this.appBarActions, required this.menuIcon, this.elevation}) : super(key: key);
    final List<Menuitem> menuItemsList;
    final Widget appBarTitle;
   final List<Widget> appBarActions;
    final Widget homeWidget,menuIcon;
+    final double ?elevation;
   
 
   @override
@@ -39,16 +39,17 @@ class CustomDrawerState extends State<CustomDrawer>
   Widget build(BuildContext context) {
 
     Widget _buildDrawer() =>  Drawer(
-          elevation: 0,
+          elevation: widget.elevation,
           backgroundColor: const Color.fromARGB(255, 28, 92, 146),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Container(
-              height: 800,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
+              height:MediaQuery.of(context).size.height,
+              padding:  const EdgeInsets.fromLTRB(
+                20,90,0,0
               ),
-              child: ListView.builder(itemBuilder:(context, index) => widget.menuItemsList[index],itemCount: widget.menuItemsList.length,)
+              child: ListView.builder(itemBuilder:(context, index) =>
+              widget.menuItemsList[index],itemCount: widget.menuItemsList.length,)
             ),
           ),
         
@@ -77,7 +78,6 @@ class CustomDrawerState extends State<CustomDrawer>
               double scale = 1 - (animationController.value * 0.15);
               return Stack(
                 children: [
-
                   _buildDrawer(),
                   Transform(
                       transform: Matrix4.identity()
@@ -114,42 +114,49 @@ class Menuitem extends StatelessWidget {
     Key? key,
     required this.title,
     required this.callback,
-    required this.iconData, 
+    required this.leadingIcon,
+    this.iconColor, this.iconSize, this.titleSize, this.titleColor, this.overflow, this.trailingIcon,
+
 
   }) : super(key: key);
   final String title;
   final VoidCallback callback;
-  final IconData iconData;
-  
+  final IconData? leadingIcon;
+  final IconData? trailingIcon;
+  final Color  ? iconColor;
+  final double ? iconSize;
+  final double ? titleSize;
+  final Color ? titleColor;
+  final TextOverflow? overflow;
+
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
         callback();
       },
-      child: Row(
- 
-        children: [
-          Padding(
-            padding:  EdgeInsets.only(right: 8,),
-            child: Icon(
-              iconData,
-              color: Colors.white,
-            ),
+      child: ListTile(
+        trailing:Icon(
+          trailingIcon,
+          color: iconColor ?? Colors.white,
+          size: iconSize?? 20,
+        ),
+          leading:Icon(
+            leadingIcon,
+            color: iconColor ?? Colors.white,
+            size: iconSize?? 20,
           ),
-          SizedBox(
-            height: 60, //color: Colors.white,
-            child: Text(
-              title,
-              overflow: TextOverflow.clip,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline2
-                  ?.copyWith(color: Colors.white, fontSize:10),
-            ),
-          )
-        ],
-      ),
+        title: Text(
+          title,
+          overflow:overflow?? TextOverflow.clip,
+          style: Theme.of(context)
+              .textTheme
+              .headline2
+              ?.copyWith(color:titleColor?? Colors.white, fontSize:titleSize?? 10),
+        ),
+
+      )
     );
   }
 }
