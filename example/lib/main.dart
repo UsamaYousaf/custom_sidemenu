@@ -41,7 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'Home',
                         leadingIcon: Icons.home,
-                          iconSize: 20,
+                          iconSize: 22,
+       titleSize: 16,
 
 
                       ),
@@ -53,7 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'History',
                            leadingIcon: Icons.history,
-                                 iconSize: 20,
+                                 iconSize: 22,
+      titleSize: 16,
                        
                       ),
     CustomMenuItem(
@@ -62,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'Setting',
                           leadingIcon: Icons.settings,
-                              iconSize: 20,
-                       
+                              iconSize: 22,
+      titleSize: 16,
                       ),
     CustomMenuItem(
                         callback: () {
@@ -71,7 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'profile',
                            leadingIcon: Icons.account_circle_outlined,
-                            iconSize: 20,
+                            iconSize: 22,
+      titleSize: 16,
                       ),
     CustomMenuItem(
                         callback: () {
@@ -79,7 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'Help',
                          leadingIcon: Icons.help,
-                            iconSize: 20,
+                            iconSize: 22,
+      titleSize: 16,
                        
                       ),
     CustomMenuItem(
@@ -88,7 +92,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                         title: 'Log Out',
                        leadingIcon: Icons.logout,
-                            iconSize: 20,
+                            iconSize: 22,
+                        titleSize: 16,
                        
                       ),
   ];
