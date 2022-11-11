@@ -103,8 +103,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //   title: Text(widget.title),
       // ),
-      body:CustomDrawer(homeWidget:  Scaffold(
-        appBar: AppBar(title:Text('Here')),
+      body:CustomDrawer(homeWidget:  const Scaffold(
+
         body: Center(child:Text('Your Home Widget'),)),
       menuItemsList: menuItemsList, appBarActions: [], appBarTitle:Text('Your Home Widget') , menuIcon: Icon(Icons.menu),
       )
