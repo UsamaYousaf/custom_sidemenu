@@ -34,63 +34,61 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   
-  List<Menuitem> menuItemsList=[
-     Menuitem(
+  List<CustomMenuItem> menuItemsList=[
+     CustomMenuItem(
                         callback: () {
                         
                         },
                         title: 'Home',
                         leadingIcon: Icons.home,
-                
+                          iconSize: 20,
+
+
                       ),
 
 
-                         Menuitem(
+    CustomMenuItem(
                         callback: () {
                         
                         },
                         title: 'History',
                            leadingIcon: Icons.history,
+                                 iconSize: 20,
                        
                       ),
-                        Menuitem(
+    CustomMenuItem(
                         callback: () {
                         
                         },
-                        title: 'Alarm',
-                          leadingIcon: Icons.access_alarm,
+                        title: 'Setting',
+                          leadingIcon: Icons.settings,
+                              iconSize: 20,
                        
                       ),
-                         Menuitem(
+    CustomMenuItem(
                         callback: () {
                         
                         },
-                        title: '',
-                           leadingIcon: Icons.history,
-                       
+                        title: 'profile',
+                           leadingIcon: Icons.account_circle_outlined,
+                            iconSize: 20,
                       ),
-                       Menuitem(
+    CustomMenuItem(
                         callback: () {
                         
                         },
-                        title: 'History',
-                         leadingIcon: Icons.history,
+                        title: 'Help',
+                         leadingIcon: Icons.help,
+                            iconSize: 20,
                        
                       ),
-                     Menuitem(
+    CustomMenuItem(
                         callback: () {
                         
                         },
-                        title: 'History',
-                       leadingIcon: Icons.history,
-                       
-                      ),
-                       Menuitem(
-                        callback: () {
-                        
-                        },
-                        title: 'History',
-                         leadingIcon: Icons.history,
+                        title: 'Log Out',
+                       leadingIcon: Icons.logout,
+                            iconSize: 20,
                        
                       ),
   ];
@@ -103,9 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
       //   title: Text(widget.title),
       // ),
-      body:CustomDrawer(homeWidget:  const Scaffold(
-        body: Center(child:Text('Your Home Widget'),)),
-      menuItemsList: menuItemsList, appBarActions: [], appBarTitle:Text('Your Home Widget') , menuIcon: Icon(Icons.menu),
+      body:CustomDrawer(homeWidget: Center(child:Text('Your Home Widget'),),
+      menuItemsList: menuItemsList, appBarActions: [], appBarTitle: Text('Your Home Widget') , menuIcon: Icon(Icons.menu),
       )
       
       );
