@@ -237,7 +237,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     required this.title,
     required this.menuIcon,
     this.orientation,
-    required this.actions,
+    required this.actions, this.background,
 
     // ignore: non_constant_identifier_names
   }) : super(key: key);
@@ -245,6 +245,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;
   final Widget menuIcon;
   final List<Widget> actions;
+  final Color ? background;
 
   Orientation? orientation;
 
@@ -254,7 +255,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
         leading: menuIcon,
         title: title,
         actions: actions,
-        backgroundColor: const Color.fromARGB(255, 28, 92, 146));
+        backgroundColor:background?? const Color.fromARGB(255, 28, 92, 146));
   }
 
   @override
