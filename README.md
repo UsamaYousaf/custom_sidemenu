@@ -25,8 +25,39 @@ Package for using custom sidebar in flutter as an parent root widget.
 ## Getting started
 pub.dev
 ## Usage
+Create the List of MenuItems and add the MenuItem which you wish to add in your drawer using this widget
+
+```dart
+ List<CustomMenuItem> menuItemsList=[
+     CustomMenuItem(
+                        callback: () {
+                        //Callback function to route to page on Click
+                        },
+                        title: 'Home',
+                        leadingIcon: Icons.home,
+                          iconSize: 22,
+       titleSize: 16,
 
 
+                      ),
+    CustomMenuItem(
+                        callback: () {
+                        //Callback function to route to page on Click
+                        },
+                        title: 'History',
+                           leadingIcon: Icons.history,
+                                 iconSize: 22,
+      titleSize: 16,
+                       
+                      ),
+                      ];
+
+                     
+
+```
+
+Add the List of menuItems in CustomDrawer widget with other customised details .
+see example for further information
 
 ```dart
 Scaffold(
@@ -41,5 +72,6 @@ Scaffold(
       );
 ```
 
+
 ## Additional information
-For Contribution and issues: https://github.com/UsamaYousaf/custom_sidemenu
+For contribution and issues: https://github.com/UsamaYousaf/custom_sidemenu
