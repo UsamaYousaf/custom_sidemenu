@@ -1,3 +1,3 @@
-## 0.0.1
+## [0.0.1] -2022-11-11
 
-* TODO: Describe initial release.
+* Initial release with basic ui

@@ -2,7 +2,7 @@ name: custom_sidemenu
 description: A new Flutter package project to customize sidebar.
 version: 0.0.1
 author: Usama Yousaf
-homepage:
+homepage: https://github.com/UsamaYousaf/custom_sidemenu.git
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
