@@ -1,6 +1,6 @@
 name: custom_sidemenu
 description: Flutter package to use custom appbar with animation and easy approach ,this widget can be root of your ui to pass home and other screen under custom menubar environment.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/UsamaYousaf/custom_sidemenu.git
 
 environment:
