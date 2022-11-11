@@ -20,7 +20,7 @@ Package for using custom sidebar in flutter as an parent root widget.
 - Parent widget to cover it all
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/42082172/82893565-d3643480-9f6e-11ea-96a7-493181df6214.gif" alt="How example looks" width="300" height="540">
+<img src="https://github.com/UsamaYousaf/custom_sidemenu/blob/main/example/assets/samplegif.gif" alt="How example looks" width="300" height="540">
 
 ## Getting started
 pub.dev
