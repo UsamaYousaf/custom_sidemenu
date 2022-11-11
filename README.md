@@ -11,29 +11,35 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Package for using custom sidebar in flutter as an parent root widget.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Custom Sidebar with animation
+- Custom Appbar
+- Parent widget to cover it all
+
+## Screenshots
+<img src="https://user-images.githubusercontent.com/42082172/82893565-d3643480-9f6e-11ea-96a7-493181df6214.gif" alt="How example looks" width="300" height="540">
 
 ## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
+pub.dev
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+
 
 ```dart
-const like = 'sample';
+Scaffold(
+      // appBar: AppBar(
+
+      //   title: Text(widget.title),
+      // ),
+      body:CustomDrawer(homeWidget: Center(child:Text('Your Home Widget'),),
+      menuItemsList: menuItemsList, appBarActions: [], appBarTitle: Text('Your Home Widget') , menuIcon: const Icon(Icons.menu),
+      )
+      
+      );
 ```
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+For Contribution and issues: https://github.com/UsamaYousaf/custom_sidemenu
